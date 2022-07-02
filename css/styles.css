@@ -14,16 +14,135 @@ body {
     display: grid;
     place-items: center;
     font-size: 62.5%;
-
-
+    font-family: 'Manrope', sans-serif;
+    
     background-color: hsl(210, 46%, 95%);
 }
 
-.main {
+.main-container {
+    max-width: 50rem;
     background-color: white;
-    width: 20rem;
-    
+    margin: 0 auto;
+
+    display: flex;
+    border-radius: 10px;
 }
-.drawer-img {
+.left-image img {
     max-width: 100%;
+    min-height: 100%;
+    border-radius: 10px 0 0 10px;
+}
+.main-text {
+    padding: 40px;
+    display: grid;
+    gap: 1rem;
+}
+.main-text h1 {
+    font-size: 1.5rem;
+    color: hsl(217, 19%, 35%);
+}
+.main-text p {
+    font-size: 0.9rem;
+    color: hsl(214, 17%, 51%);
+}
+.name-icon {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.fname {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.fname-image {
+    width: 40px;
+    border-radius: 50%;
+}
+.fullname-date {
+    display: grid;
+    gap: 0.2rem;
+}
+.fullname-date h3 {
+    font-size: 1rem;
+    color: hsl(217, 19%, 35%);
+}
+.fullname-date span {
+    font-size: 0.8rem;
+    color: hsl(214, 17%, 51%);
+}
+.share-img {
+    padding: 10px;
+    background-color: hsl(210, 46%, 95%);
+    
+    border-radius: 50%;
+    transition: .2s ease-out;
+    cursor: pointer;
+}
+.share-img:hover {
+    transform: scale(1.2);
+}
+.share-img:active {
+    transform: scale(1);
+}
+.share-icon {
+    position: relative;
+}
+.share {
+    font-size: 0.8rem;
+    letter-spacing: 6px;
+    color: hsla(210, 46%, 95%, 0.5);
+}
+.soc-med {
+    color: white;
+    background-color: hsl(217, 19%, 35%);
+    padding: 15px 30px;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    border-radius: 10px;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(-40%, -130%);
+}
+.fa-brands {
+    transition: .2s ease-out;
+    cursor: pointer;
+}
+a {
+    color: white;
+}
+.fa-brands:hover {
+    background-color: pink;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+
+/* --------- MEDIA QUERY ---------- */
+
+@media screen and (max-width: 1020px) {
+    .main-container {
+        display: grid;
+        max-width: 22rem;
+    }
+    .main-text {
+        padding: 30px;
+    }
+    .main-text h1 {
+        font-size: 1rem;
+    }
+    .left-image img {
+        border-radius: 10px 10px 0 0;
+    }
+    .name-icon {
+        margin-top: 10px;
+    }
+}
+
+/* --------- HIDDEN ---------- */
+.hidden {
+    display: none;
 }
